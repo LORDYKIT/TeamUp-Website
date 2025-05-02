@@ -1,0 +1,414 @@
+
+
+.icon-container {
+	border-radius: 50%;
+	padding: 8px;
+	width: 40px;
+	height: 40px;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.icon-container:hover {
+	background-color: #80b4ab5d;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.icon-container-alt {
+  border: 2px solid transparent; /* Set the border color */
+  border-radius: 50%; /* Make it circular */
+  font-family: 'Roboto', sans-serif; /* Font family */
+  display: flex; /* Center the icon */
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  position: relative; /* Positioning for the pseudo-element */
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out; /* Smooth scaling */
+  will-change: transform;
+  overflow: hidden;
+}
+
+.icon-container-alt::after {
+  background-color: rgba(0, 128, 128, 0.562); /* Background for the hover effect */
+  border-radius: 50%; /* Make it circular */
+  content: '';
+  display: block;
+  height: 100%; /* Full height */
+  width: 100%; /* Full width */
+  position: absolute; /* Positioning */
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg); /* Initial position */
+  transition: 0.2s transform ease-out; /* Smooth transition */
+  will-change: transform; /* Optimization for animations */
+  z-index: -1; /* Place it behind the icon */
+}
+
+.icon-container-alt:hover::after {
+  transform: translate(0, 0); /* Move to the original position on hover */
+}
+
+.icon-container-alt:hover {
+  border: 2px solid transparent; /* Hide border on hover */
+  color: white; /* Change icon color on hover */
+  transform: scale(1.05); /* Slightly enlarge the icon */
+  will-change: transform; /* Optimization */
+}
+
+
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	color-scheme: dark;
+	background-color: #f5d3d3;
+}
+
+
+/* Scrollbar for light mode */
+.light-scrollbar::-webkit-scrollbar {
+	width: 7px;
+  }
+  
+  .light-scrollbar::-webkit-scrollbar-track {
+	background-color: #f7d5fc;
+  }
+  
+  .light-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #80b4ab5d;
+  }
+  
+  /* Scrollbar for dark mode */
+  .dark-scrollbar::-webkit-scrollbar {
+	width: 7px;
+  }
+  
+  .dark-scrollbar::-webkit-scrollbar-track {
+	background-color: #333;
+  }
+  
+  .dark-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #888;
+  }
+  
+  /* Light Mode message bubbles */
+.light-bubble {
+	background-color: #ebe3ec; /* Light mode bubble background */
+	color: black; /* Light mode text color */
+  }
+  
+  .light-bubble-current-user {
+	background-color: #80b4ab5d; /* Light mode for the current user's message */
+	color: rgb(3, 0, 0);
+  }
+  
+  /* Dark Mode message bubbles */
+  .dark-bubble {
+	background-color: #ede7f0a6; /* Dark mode bubble background */
+	color: rgb(2, 0, 0); /* Dark mode text color */
+  }
+  
+  .dark-bubble-current-user {
+	background-color: #1b1b1b; /* Dark mode for the current user's message */
+	color: white;
+  }
+  
+  .sent-image {
+    background-color: transparent; /* Set the background to transparent */
+    border-radius: 8px; /* Optional: Add some rounded corners */
+    display: inline-block; /* Ensure it wraps around the image */
+    padding: 0; /* Optional: Adjust padding as needed */
+}
+
+.sent-image img {
+    display: block; /* Remove extra space below the image */
+    max-width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+.button {
+  --offset: 6px; 
+  --border-size: 1px; 
+  padding: 0.75em 1.5em; 
+  font-size: 0.875rem; 
+  display: block;
+  position: relative;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: teal;
+  text-transform: uppercase;
+  letter-spacing: 0.15em; 
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  transition: background 0.8s ease;
+
+  &:hover {
+    background: rgba(100, 0, 0, 0.03);
+  }
+
+  &__horizontal,
+  &__vertical {
+    position: absolute;
+    top: var(--horizontal-offset, 0);
+    right: var(--vertical-offset, 0);
+    bottom: var(--horizontal-offset, 0);
+    left: var(--vertical-offset, 0);
+    transition: transform 0.8s ease;
+    will-change: transform;
+
+    &::before {
+      content: '';
+      position: absolute;
+      border: inherit;
+    }
+  }
+
+  &__horizontal {
+    --vertical-offset: calc(var(--offset) * -1);
+    border-top: var(--border-size) solid currentcolor;
+    border-bottom: var(--border-size) solid currentcolor;
+
+    &::before {
+      top: calc(var(--vertical-offset) - var(--border-size));
+      bottom: calc(var(--vertical-offset) - var(--border-size));
+      left: calc(var(--vertical-offset) * -1);
+      right: calc(var(--vertical-offset) * -1);
+    }
+  }
+
+  &:hover &__horizontal {
+    transform: scaleX(0);
+  }
+
+  &__vertical {
+    --horizontal-offset: calc(var(--offset) * -1);
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor;
+
+    &::before {
+      top: calc(var(--horizontal-offset) * -1);
+      bottom: calc(var(--horizontal-offset) * -1);
+      left: calc(var(--horizontal-offset) - var(--border-size));
+      right: calc(var(--horizontal-offset) - var(--border-size));
+    }
+  }
+
+  &:hover &__vertical {
+    transform: scaleY(0);
+  }
+}
+
+.btn-one {
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+  border: none; /* Remove any border */
+}
+
+.btn-one span {
+  transition: all 0.3s;
+}
+
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 0; /* Remove top border */
+  border-bottom-width: 0; /* Remove bottom border */
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: teal;
+  border-bottom-color: teal;
+  transform: scale(0.1, 1);
+}
+
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1);
+  border-top-width: 1px; /* Add border on hover */
+  border-bottom-width: 1px; /* Add border on hover */
+}
+
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(170, 35, 35, 0);
+}
+
+.btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+ 
+}
+
+
+
+/* General styling for all MenuItems */
+.stroke {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.5s;
+ 
+}
+
+
+
+.stroke:hover::after {
+  width: 100%;
+}
+
+/* stroke */
+.stroke {
+  position: relative;
+}
+
+.stroke:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ''; /* Changed content to an empty string for a cleaner underline */
+  color: transparent;
+  background: teal;
+  height: 2px; /* Adjust the height to make the underline thicker */
+  transition: width 0.5s; /* Smooth transition effect for width */
+}
+
+.stroke:hover:after {
+  width: 100%; /* Full width on hover */
+}
+
+.stroke {
+  transition: color 0.5s; /* Change transition property for color */
+}
+
+.stroke:after {
+  text-align: left;
+  content: ''; /* Changed content to an empty string for a cleaner underline */
+  margin: 0;
+  opacity: 0;
+}
+
+.stroke:hover {
+  color: teal;
+  z-index: 1;
+}
+
+.stroke:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards; /* Ensure this animation is defined somewhere */
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+/* AuthPage.css */
+.video-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -100;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+/* Style for the buttons */
+.button-auth {
+  --c: teal;
+  color: var(--c);
+  font-size: 16px;
+  border: 0.3em solid var(--c);
+  border-radius: 0.5em;
+  width: 12em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Adding a span effect to the button */
+.button-auth span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+/* Hover effect */
+.button-auth:hover {
+  color: white;
+}
+
+.button-auth:hover span {
+  transform: translateY(0) scale(2);
+}
+
+/* Apply a custom number to each span */
+.button-auth span:nth-child(1) {
+  --n: 1;
+}
+
+.button-auth span:nth-child(2) {
+  --n: 2;
+}
+
+.button-auth span:nth-child(3) {
+  --n: 3;
+}
+
+.button-auth span:nth-child(4) {
+  --n: 4;
+}

@@ -1,0 +1,271 @@
+# Created by https://www.toptal.com/developers/gitignore/api/venv,python,node
+# Edit at https://www.toptal.com/developers/gitignore?templates=venv,python,node
+
+### Node ###
+# dotenv
+backend/.env
+
+# ML
+backend/AIModel/aggressionCleaned.csv
+
+# Logs
+backend/logs
+backend/*.log
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/lerna-debug.log*
+backend/.pnpm-debug.log*
+
+# Diagnostic reports
+backend/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+backend/pids
+backend/*.pid
+backend/*.seed
+backend/*.pid.lock
+
+# jscoverage
+backend/lib-cov
+
+# Coverage tools
+backend/coverage
+backend/*.lcov
+backend/.nyc_output
+
+# Grunt, Bower
+backend/.grunt
+backend/bower_components
+
+# node-waf config
+backend/.lock-wscript
+
+# Binary addons
+backend/build/Release
+
+# Dependency directories
+backend/node_modules/
+backend/jspm_packages/
+
+# Snowpack
+backend/web_modules/
+
+# TypeScript cache
+backend/*.tsbuildinfo
+
+# Optional npm/yarn/pnpm files
+backend/.npm
+backend/.eslintcache
+backend/.stylelintcache
+backend/.rpt2_cache/
+backend/.rts2_cache_cjs/
+backend/.rts2_cache_es/
+backend/.rts2_cache_umd/
+backend/.node_repl_history
+backend/*.tgz
+backend/.yarn-integrity
+
+# dotenv
+backend/.env
+backend/.env.development.local
+backend/.env.test.local
+backend/.env.production.local
+backend/.env.local
+
+# Parcel cache
+backend/.cache
+backend/.parcel-cache
+
+# Next.js
+backend/.next
+backend/out
+
+# Nuxt.js / Gatsby / Vuepress
+backend/.nuxt
+backend/dist
+backend/.vuepress/dist
+backend/.temp
+backend/.docusaurus
+
+# Serverless & build
+backend/.serverless/
+backend/.fusebox/
+backend/.dynamodb/
+backend/.tern-port
+backend/.vscode-test
+backend/.webpack/
+backend/.svelte-kit
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+
+# C extensions
+backend/*.so
+
+# Packaging
+backend/.Python
+backend/build/
+backend/develop-eggs/
+backend/dist/
+backend/downloads/
+backend/eggs/
+backend/.eggs/
+backend/lib/
+backend/lib64/
+backend/parts/
+backend/sdist/
+backend/var/
+backend/wheels/
+backend/share/python-wheels/
+backend/*.egg-info/
+backend/.installed.cfg
+backend/*.egg
+backend/MANIFEST
+
+# PyInstaller
+backend/*.manifest
+backend/*.spec
+
+# Installer logs
+backend/pip-log.txt
+backend/pip-delete-this-directory.txt
+
+# Coverage/test reports
+backend/htmlcov/
+backend/.tox/
+backend/.nox/
+backend/.coverage
+backend/.coverage.*
+backend/nosetests.xml
+backend/coverage.xml
+backend/*.cover
+backend/*.py,cover
+backend/.hypothesis/
+backend/.pytest_cache/
+backend/cover/
+
+# Translations
+backend/*.mo
+backend/*.pot
+
+# Django
+backend/local_settings.py
+backend/db.sqlite3
+backend/db.sqlite3-journal
+
+# Flask
+backend/instance/
+backend/.webassets-cache
+
+# Scrapy
+backend/.scrapy
+
+# Sphinx
+backend/docs/_build/
+
+# PyBuilder
+backend/.pybuilder/
+backend/target/
+
+# Jupyter
+backend/.ipynb_checkpoints
+
+# IPython
+backend/profile_default/
+backend/ipython_config.py
+
+# pipenv, poetry, pdm
+backend/.python-version
+backend/Pipfile.lock
+backend/poetry.lock
+backend/pdm.lock
+backend/.pdm.toml
+backend/__pypackages__/
+
+# Celery
+backend/celerybeat-schedule
+backend/celerybeat.pid
+
+# SageMath
+backend/*.sage.py
+
+# Environments
+backend/.venv
+backend/env/
+backend/venv/
+backend/ENV/
+backend/env.bak/
+backend/venv.bak/
+
+# Spyder
+backend/.spyderproject
+backend/.spyproject
+
+# Rope
+backend/.ropeproject
+
+# mkdocs
+backend/site
+
+# mypy
+backend/.mypy_cache/
+backend/.dmypy.json
+backend/dmypy.json
+
+# Pyre / pytype
+backend/.pyre/
+backend/.pytype/
+
+# Cython debug
+backend/cython_debug/
+
+# JetBrains
+# .idea/ ← intentionally not added unless you want to ignore IDE settings
+
+# Poetry local config
+backend/poetry.toml
+
+# Ruff
+backend/.ruff_cache/
+
+# LSP
+backend/pyrightconfig.json
+
+### venv ###
+# Virtualenv folders
+backend/[Bb]in
+backend/[Ii]nclude
+backend/[Ll]ib
+backend/[Ll]ib64
+backend/[Ll]ocal
+backend/[Ss]cripts
+backend/pyvenv.cfg
+backend/pip-selfcheck.json
+
+# Created by https://www.toptal.com/developers/gitignore/api/react
+# Edit at https://www.toptal.com/developers/gitignore?templates=react
+
+### react ###
+frontend/.DS_*
+frontend/*.log
+frontend/logs
+frontend/**/*.backup.*
+frontend/**/*.back.*
+
+frontend/node_modules
+frontend/bower_components
+
+frontend/*.sublime*
+
+frontend/psd
+frontend/thumb
+frontend/sketch
+
+# End of https://www.toptal.com/developers/gitignore/api/react
+
+
+# End of https://www.toptal.com/developers/gitignore/api/venv,python,node

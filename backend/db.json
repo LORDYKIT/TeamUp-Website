@@ -1,0 +1,118 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "miasaba",
+      "fullname": "Mia Saba",
+      "email": "miasaba@example.com",
+      "password": "123",
+      "biography": "Software developer and tech enthusiast.",
+      "profile_picture": "/post1.png",
+      "posts": [
+        {
+          "id": 101,
+          "username": "user1",
+          "content": "My first post!",
+          "picture": null,
+          "category": null,
+          "likes": 15,
+          "replies": 3,
+          "date": "2023-10-20T12:00:00Z",
+          "comments": [
+            {
+              "id": 201,
+              "username": "user2",
+              "content": "Nice post!",
+              "date": "2023-10-20T13:00:00Z"
+            },
+            {
+              "id": 202,
+              "username": "user3",
+              "content": "Thanks for sharing!",
+              "date": "2023-10-20T14:00:00Z"
+            }
+          ]
+        }
+      ],
+      "followers": [
+        {
+          "id": 2,
+          "username": "user2",
+          "fullname": "Jane Smith",
+          "profile_picture": "https://example.com/profile2.jpg"
+        }
+      ],
+      "following": [
+        {
+          "id": 3,
+          "username": "user3",
+          "fullname": "Mike Johnson",
+          "profile_picture": "https://example.com/profile3.jpg"
+        }
+      ],
+      "online": true,
+      "liked_posts": [
+        {
+          "id": 102,
+          "username": "user2",
+          "content": "Another great day!",
+          "picture": "https://example.com/post1.jpg",
+          "category": "daily",
+          "likes": 25,
+          "replies": 5,
+          "date": "2023-10-19T08:00:00Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": 1730775774798,
+      "username": "johnSmith",
+      "fullname": "John Smith",
+      "email": "johnsmith@example.com",
+      "password": "123",
+      "biography": "Hello I'm new to TeamUp!",
+      "profile_picture": "/defaultProfile.png"
+    }
+  ],
+  "posts": [
+    {
+      "id": 102,
+      "username": "user2",
+      "content": "Another great day!",
+      "picture": "https://example.com/post1.jpg",
+      "category": "daily",
+      "likes": 25,
+      "replies": 5,
+      "date": "2023-10-19T08:00:00Z",
+      "comments": [
+        {
+          "id": 203,
+          "username": "user1",
+          "content": "Absolutely!",
+          "date": "2023-10-19T09:00:00Z"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": 201,
+      "username": "user2",
+      "content": "Nice post!",
+      "date": "2023-10-20T13:00:00Z"
+    },
+    {
+      "id": 202,
+      "username": "user3",
+      "content": "Thanks for sharing!",
+      "date": "2023-10-20T14:00:00Z"
+    },
+    {
+      "id": 203,
+      "username": "user1",
+      "content": "Absolutely!",
+      "date": "2023-10-19T09:00:00Z"
+    }
+  ]
+}
