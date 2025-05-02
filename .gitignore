@@ -5,8 +5,8 @@
 # dotenv
 backend/.env
 
-# ML
-backend/AIModel/aggressionCleaned.csv
+# # ML
+# backend/AIModel/aggressionCleaned.csv
 
 # Logs
 backend/logs
